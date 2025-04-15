@@ -22,22 +22,7 @@ namespace PracticeApp
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //string testPath = 
-            //    "C:\\Users\\User\\Documents\\1_Задания_для_колледжа\\Учебная_практика_Резников\\Решение\\PracticeApp\\bin\\Debug\\" +
-            //    "net6.0-windows\\Product_Images\\бананы.jpg";
 
-            //string conString = "Host=localhost;Username=postgres;Password=admin;Database=postgres";
-
-            //NpgsqlConnection con = new NpgsqlConnection(conString);
-            //con.Open();
-
-            ////string getProductGroupNames = "SELECT image_path FROM product_image WHERE image_path = @ImagePath RETURNING id";
-            //string getProductGroupNames = "SELECT CASE WHEN EXISTS (SELECT 1 FROM product_image WHERE image_path = @ImagePath) THEN (SELECT id FROM product_image WHERE image_path = @ImagePath) ELSE NULL END AS id";
-            //NpgsqlCommand cmd = new NpgsqlCommand(getProductGroupNames, con);
-            //cmd.Parameters.AddWithValue("@ImagePath", testPath);
-            //var rest = cmd.ExecuteScalar(); // Вернёт строчку если будет совпадение с testPath и NULL в противном случае
-
-            //int a = 2;
         }
 
         private void AddProductToolStripMenuItem_Click(object sender, EventArgs e)

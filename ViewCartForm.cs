@@ -24,21 +24,7 @@ namespace PracticeApp
 
         private void ViewCartForm_Load(object sender, EventArgs e)
         {
-            //var listBox = new ListBox();
-            //listBox.Location = new Point(20, 30);
-            //listBox.Size = new Size(this.ClientSize.Width - 2 * 20, 100);
-            //listBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            //this.Controls.Add(listBox);
-            //foreach (var item in cart.GetItems())
-            //{
-            //    listBox.Items.Add($"{item.Product.Name} - {item.Quantity} шт. по {item.Product.Price:C} (Итого: {item.Quantity * item.Product.Price:C})");
-            //}
-
-            //this.Size = new Size(400, 400);
-
             List<StoreItem> storeItems = new List<StoreItem>();
-            
-
 
             // Заполняем клиентов
             NpgsqlConnection con = new NpgsqlConnection(constring);
@@ -51,7 +37,6 @@ namespace PracticeApp
             {
                 selectClientComboBox.Items.Add(dataReader.GetString(0));
             }
-            //dataReader.Close();
             con.Close();
 
             // Заполняем магазины
@@ -61,11 +46,9 @@ namespace PracticeApp
             var dataReader1 = selectStoreCommand.ExecuteReader();
             while (dataReader1.Read())
             {
-                //selectStoreComboBox.Items.Add(dataReader1.GetInt32(0));
                 storeItems.Add(new StoreItem { Id = dataReader1.GetInt32(0), Name = dataReader1.GetString(1) });
             }
             selectStoreComboBox.DataSource = storeItems;
-            //dataReader1.Close();
             con.Close();
             // ---------------------------------------------- Заполняем лист корзины
             foreach (var item in cart.GetItems())
@@ -83,8 +66,6 @@ namespace PracticeApp
 
             if (selectStoreComboBox.SelectedIndex != -1)
             {
-                //string selectedStore = selectStoreComboBox.SelectedItem.ToString();
-
                 StoreItem selectedItem = (StoreItem)selectStoreComboBox.SelectedItem;
                 int selectedId = selectedItem.Id;
 
@@ -112,13 +93,7 @@ namespace PracticeApp
 
         private void makeSellBtn_Click(object sender, EventArgs e)
         {
-            //NpgsqlConnection con = new NpgsqlConnection(constring);
-            //con.Open();
 
-
-
-            //string selectStoreQuery = "SELECT store_name FROM store WHERE is_warehouse = false";
-            //string selectEmployee
         }
 
 

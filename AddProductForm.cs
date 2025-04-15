@@ -38,12 +38,6 @@ namespace PracticeApp
                 comboBox1.Items.Add(dataReader.GetString(0));
             }
             con.Close();
-
-            //string getProductGroupNames = "SELECT group_name FROM product_group";
-            //using (var cmd = new NpgsqlCommand(getProductGroupNames, con))
-            //{
-
-            //}
         }
 
         private void loadProductImageBtn_Click(object sender, EventArgs e)

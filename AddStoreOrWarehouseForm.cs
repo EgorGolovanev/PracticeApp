@@ -67,18 +67,6 @@ namespace PracticeApp
                     return;
                 }
             }
-
-            //NpgsqlCommand addStoreCommand = new NpgsqlCommand(addStoreQuery, con);
-            //addStoreCommand.Parameters.AddWithValue("@StoreName", storeName);
-            //addStoreCommand.Parameters.AddWithValue("@StoreAddress", storeAddress);
-            //addStoreCommand.Parameters.AddWithValue("@IsWarehouse", isWarehouse);
-            //addStoreCommand.ExecuteNonQuery();
-            //con.Close();
-
-            //storeNameTextBox.Clear();
-            //storeAddressTextBox.Clear();
-            //checkBox1.Checked = false;
-            //MessageBox.Show("Точка добавлена!");
         }
     }
 }
