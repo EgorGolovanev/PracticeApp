@@ -68,7 +68,7 @@ namespace PracticeApp
             }
 
             // Получаем данные пользователя из полей
-            string productCode = textBoxProductCode.Text;
+            int productCode = Int32.Parse(textBoxProductCode.Text);
             string productName = textBoxProductName.Text;
             string productBrand = textBoxProductBrand.Text;
             int productGroup = comboBox1.SelectedIndex + 1;
